@@ -89,8 +89,7 @@
     "wordwrap": "^0.0.3"
   },
   "scripts": {
-    "start": "NODE_ENV=development ./node_modules/.bin/netlify-lambda serve src",
-    "build": "NODE_ENV=production ./node_modules/.bin/netlify-lambda build src"
+    "start": "node app.js",
   },
   "repository": {
     "type": "git",

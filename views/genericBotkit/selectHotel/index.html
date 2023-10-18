@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css"
+        integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link rel="stylesheet" type="text/css"
+        href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>KORE.AI</title>
+</head>
+
+<body class="demoPortalBody">
+
+    <!-- HEADER -->
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark navMainDesktop">
+        <div class="container">
+            <div class="col-3"><a href="https://kore.ai/"><img src="https://kore.ai/wp-content/uploads/kore.ai_logo.svg"
+                        class="logoImage"></a></div>
+
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <!-- CONTAINER -->
+    <div class="container-fluid demoPortalContainer library">
+        <div class="container">
+
+            <!--CHANNELS LIST-->
+            <div class="row wow fadeIn channelsList">
+
+                <!--Grid column-->
+                <div class="col-md-3 mb-4 channelDetails">
+                    <!--Card-->
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="name">
+                            <div class="channelsIconsDiv">
+
+
+                            </div>
+                            </p>
+
+                            <img class="channelIcon" style="width: 100%;" id="hotel_image1"
+                                src="https://kore.ai/wp-content/uploads/kore.ai_logo.svg">
+                            <p class="type" id="hotel_name1">Hotel Name</p>
+                            <p class="Description" id="desc1">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas tristique, ligula sit amet tempor pharetra, lectus mi finibus sem, id
+                                ullamcorper sem eros ac ipsum. Duis ultricies sem vitae neque feugiat cursus.</p>
+
+
+                        </div>
+                        <div class="detailsButton">
+                            <!-- Button trigger modal -->
+                            <button type="button" class="btn btn-primary details" id="select1">
+                                Select
+                            </button>
+
+                            <!-- Modal -->
+
+                        </div>
+                    </div>
+                    <!--/.Card-->
+                </div>
+                <!--Grid column-->
+                <!--Grid column-->
+                <div class="col-md-3 mb-4 channelDetails">
+                    <!--Card-->
+                    <div class="card">
+                        <div class="card-body">
+                            <p class="name">
+                            <div class="channelsIconsDiv">
+
+
+                            </div>
+                            </p>
+                            <img class="channelIcon" style="width: 100%;" id="hotel_image2"
+                                src="https://kore.ai/wp-content/uploads/kore.ai_logo.svg">
+                            <p class="type" id="hotel_name2">Hotel Name</p>
+                            <p class="Description" id="desc2">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                Maecenas tristique, ligula sit amet tempor pharetra, lectus mi finibus sem, id
+                                ullamcorper sem eros ac ipsum. Duis ultricies sem vitae neque feugiat cursus.</p>
+
+                        </div>
+                        <div class="detailsButton">
+                            <!-- Button trigger modal -->
+
+                            <button type="button" class="btn btn-primary details" id="select2"
+                                onclick="select_function(hotelValue2);">
+                                Select
+                            </button>
+
+
+                        </div>
+                    </div>
+                    <!--/.Card-->
+                </div>
+
+            </div>
+            <!--CHANNELS LIST-->
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js"
+        integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+
+</body>
+
+</html>
+<script>
+    var url_string = window.location.href;
+    var url = new URL(decodeURI(url_string));
+    //alert(url);
+
+    var desc = url.searchParams.get("hotelDetails");
+    var hotelDetails = JSON.parse(desc);
+
+</script>
+<script>
+    $('#hotel_name1').text(hotelDetails[0].HotelName);
+    $('#hotel_name2').text(hotelDetails[1].HotelName);
+    $('#desc1').text(hotelDetails[0].Location);
+    $('#desc2').text(hotelDetails[1].Location);
+    // $('#hotel_image1').text(hotelDetails[0].HotelImage);
+    $('#hotel_image1').attr('src', hotelDetails[0].HotelImage)
+    $('#hotel_image2').attr('src', hotelDetails[1].HotelImage)
+   // $('#hotel_image2').text(hotelDetails[1].HotelImage);
+</script>
+
+<script>
+    $("#select1").click(function () {
+        onClick($('#hotel_name1').text());
+    });
+    $("#select2").click(function () {
+        onClick($('#hotel_name2').text());
+    });
+</script>
+
+
+<script>
+    function onClick(first_hotel_value) {
+        let url_string = window.location.href;
+        let url = new URL(decodeURI(url_string));
+        let requestId = url.searchParams.get("requestId");
+
+        var data = JSON.stringify({
+            "requestId": requestId,
+            "hotelName": first_hotel_value
+        });
+        console.log(data);
+        var xhr = new XMLHttpRequest();
+        xhr.withCredentials = true;
+
+        xhr.addEventListener("readystatechange", function () {
+            if (this.readyState === 4) {
+                console.log(this.responseText);
+                var myWindow = window.open("", "_self");
+                myWindow.document.write("");
+                setTimeout(function () { myWindow.close(); }, 1000);
+            }
+        });
+        xhr.open("POST", window.location.origin + "/genericBotkit/selectHotel");
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.send(data);
+    }
+</script>

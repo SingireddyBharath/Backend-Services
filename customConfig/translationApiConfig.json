@@ -1,0 +1,12 @@
+{
+    "translationUrl": "https://nlp-translation.p.rapidapi.com/v1/translate",
+    "translationApiKey": "064231e607msh5464a1edb50ca19p141386jsnfa3051a73eb9",
+    "languageDetectionUrl": "https://microsoft-translator-text.p.rapidapi.com/Detect",
+    "languageDetectionApiKey": "XLcqAROeBxmshsZ2MF243zephdVEp17UIMPjsnx9RNpjb1SRD0",
+    "rapidTranslationUrl": "https://text-translator2.p.rapidapi.com/translate",
+    "rapidTanslationApiKey": "dfcaefbb1cmsh28ab9da37562ef4p1f2f32jsn4daaa1af89e5",
+
+    "googleTranslationUrl":"https://translation.googleapis.com/language/translate/v2",
+    "googleDetectUrl":"https://translation.googleapis.com/language/translate/v2/detect",
+    "googleKey":"AIzaSyAKJKH3a4kHZsz0sOQQ8IUe_VkD-RtgBTQ"
+}

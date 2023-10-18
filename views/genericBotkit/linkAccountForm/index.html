@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="https://demo.kore.ai/demo/wp-content/themes/demoportal/css/styles.css">
+      <title>KORE.AI</title>
+   </head>
+   <body class="demoPortalFrame">
+      <div class="container-fluid">
+         <div class="leftImage"></div>
+         <div class="loginForm">
+            <div class="logo"> 
+              <!-- <img src="https://demo.kore.ai/demo/wp-content/themes/demoportal/images/logo.png" class="logoImage">--->
+               <p class="demo" style="font-size: 17px;">Please provide the information and click on submit</p>
+            </div>
+            <form name="mg" METHOD="POST" class="formFields">
+               <p class="submit_msg" id="submit_msg" style="display:none;">Thank you for filling out your information! </p>
+               <div class="form-group">
+                  <input class="form-control" type="text" name="fullname" placeholder="Full Name">
+               </div>
+               <div class="form-group">
+                  <input class="form-control" type="text" name="bonvoynumber" placeholder="Bonvoy Number" >
+               </div>
+               <div class="form-group">
+                  <textarea class="form-control" id="Address" name="Address" rows="1" placeholder="Enter your street address"></textarea>
+               </div>
+               <div class="form-group">
+                  <input class="form-control" type="text" name="city" placeholder="City" >
+               </div>
+               
+               <div class="form-group">
+                  <input class="form-control" type="text" name="zip" placeholder="Zip Code" >
+               </div>
+               <div class="form-group">
+                  <!--<input class="form-control" type="text" name="country" placeholder="Country">--->
+				  <select class="form-control" name="Country" id="Country" >
+<option value="">Select Country</option>
+<option value="USA">USA</option>
+<option value="Japan">Japan</option>
+<option value="China">China</option>
+<option value="IND">India</option>
+<option value="	Russia">Russia</option>
+<option value="Canada">Canada</option>
+
+</select>
+               </div>
+			   <div class="form-group">
+                  <!--<input class="form-control" type="text" name="state" placeholder="State" >--->
+				 
+<select class="form-control" name="state" id="state" >
+<option value="">Select State</option>
+<option value="Alabama">Alabama</option>
+<option value="Alaska">Alaska</option>
+<option value="Arizona">Arizona</option>
+<option value="Arkansas">Arkansas</option>
+<option value="California">California</option>
+<option value="Colorado">Colorado</option>
+<option value="Connecticut">Connecticut</option>
+<option value="Delaware">Delaware</option>
+<option value="Florida">Florida</option>
+<option value="Georgia">Georgia</option>
+<option value="Hawaii">Hawaii</option>
+<option value="Idaho">Idaho</option>
+<option value="Illinois">Illinois</option>
+<option value="Indiana">Indiana</option>
+<option value="Iowa">Iowa</option>
+<option value="Kansas">Kansas</option>
+<option value="Kentucky">Kentucky</option>
+<option value="Louisiana">Louisiana</option>
+<option value="Maine">Maine</option>
+<option value="Maryland">Maryland</option>
+<option value="Massachusetts">Massachusetts</option>
+<option value="Michigan">Michigan</option>
+<option value="Minnesota">Minnesota</option>
+<option value="Mississippi">Mississippi</option>
+<option value="Missouri">Missouri</option>
+<option value="Montana">Montana</option>
+<option value="Nebraska">Nebraska</option>
+<option value="Nevada">Nevada</option>
+<option value="New Hampshire">New Hampshire</option>
+<option value="New Jersey">New Jersey</option>
+<option value="New Mexico">New Mexico</option>
+<option value="New York">New York</option>
+<option value="North Carolina">North Carolina</option>
+<option value="North Dakota">North Dakota</option>
+<option value="Ohio">Ohio</option>
+<option value="Oklahoma">Oklahoma</option>
+<option value="Oregon">Oregon</option>
+<option value="Pennsylvania">Pennsylvania</option>
+<option value="Rhode Island">Rhode Island</option>
+<option value="South Carolina">South Carolina</option>
+<option value="South Dakota">South Dakota</option>
+<option value="Tennessee">Tennessee</option>
+<option value="Texas">Texas</option>
+<option value="Utah">Utah</option>
+<option value="Vermont">Vermont</option>
+<option value="Virginia">Virginia</option>
+<option value="Washington">Washington</option>
+<option value="West Virginia">West Virginia</option>
+<option value="Wisconsin">Wisconsin</option>
+<option value="Wyoming">Wyoming</option> 
+
+
+</select>
+               </div>
+               <div class="form-group">
+                  <input class="form-control" type="text" name="phone" id="phone" placeholder="Phone Number">
+               </div>
+               <fieldset class="inputDiv">
+                  <button class="btn btn-success" type="button" id="submit_button">Submit</button>
+               </fieldset>
+            </form>
+         </div>
+         <div class="rightImage"></div>
+      </div>
+      </div>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+   </body>
+</html>
+<script>
+   $("#submit_button").click(function(){
+   /* var phone = $('#phone').val();
+   if(phone.trim() != '' ){ 
+          
+       } */
+   	
+   	
+   $("#submit_msg").removeAttr("style");
+    // alert("clicked select button");
+     $("#submit_msg").removeAttr("style");
+     $("#submit_msg").focus();
+     
+     let url_string = window.location.href;
+           let url = new URL(decodeURI(url_string));
+           let requestId = url.searchParams.get("requestId");
+   
+           var data = JSON.stringify({
+               "requestId": requestId
+           });
+           console.log(data);
+           var xhr = new XMLHttpRequest();
+           xhr.withCredentials = true;
+   
+           xhr.addEventListener("readystatechange", function () {
+               if (this.readyState === 4) {
+                   console.log(this.responseText);
+                   var myWindow = window.open("", "_self");
+                   myWindow.document.write("");
+                   setTimeout(function () { myWindow.close(); }, 1000);
+               }
+           });
+           xhr.open("POST", window.location.origin + "/genericBotkit/linkAccountForm");
+           xhr.setRequestHeader("Content-Type", "application/json");
+           xhr.send(data);
+   });
+   
+</script>
+<style>
+   .demoPortalFrame .container-fluid .loginForm{
+   top: 60% !important;
+   }
+</style>
+<style>
+   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+   color: #ced4da !important;
+   }
+   ::-moz-placeholder { /* Firefox 19+ */
+   color: #ced4da !important;
+   }
+   :-ms-input-placeholder { /* IE 10+ */
+   color: #ced4da !important;
+   }
+   :-moz-placeholder { /* Firefox 18- */
+   color: #ced4da !important;
+   }
+   textarea::-webkit-input-placeholder {
+   color: #ced4da !important;
+   font-weight: 300;
+   }
+   /* Firefox 18- */
+   textarea:-moz-placeholder {
+   color: #ced4da !important; 
+   }
+   /* Firefox 19+ */
+   textarea::-moz-placeholder {
+   color: #ced4da !important; 
+   }
+   textarea:-ms-input-placeholder {
+   color: #ced4da !important; 
+   }
+   textarea::placeholder {
+   color: grey; 
+   }
+   .submit_msg{
+   color: red; 
+   }
+
+</style>

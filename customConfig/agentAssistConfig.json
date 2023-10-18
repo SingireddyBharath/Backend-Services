@@ -1,0 +1,9 @@
+{
+    "smsConfig": {
+        "baseUrl": "https://api.twilio.com/2010-04-01/Accounts/ACcea0991dae7309b636cbbc26e1eeff27/Messages.json",
+        "key": "QUNjZWEwOTkxZGFlNzMwOWI2MzZjYmJjMjZlMWVlZmYyNzplMTNhNzIwNzdhN2FiOTYwZWI2ZmFmNzQ1NTViM2Q4Yw==",
+        "imageUploadPageUrl" : "https://demo.kore.net/genericBotkit/agentAssist/index.html",
+        "imageUploadBotUrl": "http://demo.kore.net/agentassist/bot/index.html",
+        "isSMSEnabled": true
+    }
+}

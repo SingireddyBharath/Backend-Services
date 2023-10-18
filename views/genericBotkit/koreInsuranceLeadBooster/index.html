@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <title>Kore.ai Payment Gateway</title>
+</head>
+<body class="bg-gray-900">
+  <nav class="bg-purple-900 h-20 flex justify-center">
+    <h1 class="text-white text-5xl">Kore.ai Payment Gateway</h1>
+  </nav>
+  <div class="flex justify-center mt-32">
+    <form action="/genericBotkit/koreInsuranceLeadBooster/" method="POST" class="flex flex-col w-1/3">
+      <input class="bg-transparent text-white p-2 h-10 mb-4" type="text" name="name" id = "_name" placeholder="Name">
+      <input type="email" class="bg-transparent text-white p-2 h-10 mb-4" name="email" id = "_email" placeholder="Email">
+     <!--  -->
+     <div class="input-group">
+
+          <input style="width:6% " class="bg-transparent text-white p-2 h-10 mb-4" placeholder="currency"  name="currency" type="text" value="$" readonly/>
+          <input style="width:93% " class="bg-transparent text-white p-2 h-10 mb-4" placeholder="Amount" id="amount" name="amount" type="text" />
+
+      </div>    
+ 
+     <input class="bg-transparent text-white p-2 h-10 mb-4" type="text" id="desc" name="description" placeholder="Description">
+     <!-- // -->
+      <input type="text" class="bg-transparent text-white p-2 h-10 mb-4" style="display: none;" id="reqId" name="requestId" placeholder="Request id">
+      <div id="card-element" class="bg-transparent text-white p-2 h-10 mb-4"></div>
+      <div id="card-errors" role="alert"></div>
+      <button class="text-white bg-purple-900 p-4 rounded">Submit Payment</button>
+    </form>
+  </div>
+</body>
+<script>
+  var url_string = window.location.href;
+  var url;
+  try{
+      url = new URL(decodeURI(url_string));
+  }catch(ex){
+    url = new URL(decodeURIComponent(encodeURIComponent(window.location.href)));
+  }
+  var description = url.searchParams.get("plan");
+  document.getElementById('desc').value =description;
+  var amount = url.searchParams.get("amount");
+  document.getElementById('amount').value =amount;
+  var requestId = url.searchParams.get("requestId");
+  document.getElementById('reqId').value =requestId
+
+  var name = url.searchParams.get("name");
+  document.getElementById('_name').value =(name && name !=null && name !="null")?name:"";
+
+  var email = url.searchParams.get("email");
+  document.getElementById('_email').value =(email && email!=null && email!="null")?email:"";
+
+  console.log(document.getElementById('desc').value,document.getElementById('reqId').value)
+</script>
+<script src="https://js.stripe.com/v3/"></script>
+<script src="card.js"></script>
+
+</html>

@@ -90,7 +90,6 @@ module.exports = {
     }
   },
   on_bot_message: function (requestId, data, callback) {
-    console.log("bot message -- >  ", data);
     sdk.sendUserMessage(data, callback);
   },
 };

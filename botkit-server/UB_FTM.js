@@ -57,9 +57,8 @@ module.exports = {
     var intentFound = await findIntent(data.message);
 
     console.log("\n\nIdentified Intent : ", intentFound);
-
+    if (!intentFound) return sdk.sendBotMessage(data, callback);
     intentFound = intentFound.replace(/^"|"$/g, "");
-
     data.metaInfo = {
       nlMeta: {
         intent: intentFound,

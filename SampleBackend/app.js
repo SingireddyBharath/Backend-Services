@@ -100,9 +100,9 @@ app.post("/extractSKU", (req, res) => {
   console.log(userInput);
   let skuFound = false;
   for (const obj of skuObjs) {
-    if (userInput.includes(obj.id)) {
+    if (userInput.includes(obj)) {
       skuFound = true;
-      res.json({ sku: obj.id });
+      res.json({ sku: obj });
       break; // Exit the loop once an SKU is found
     }
   }

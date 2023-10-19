@@ -102,6 +102,7 @@ app.post("/extractSKU", (req, res) => {
   for (const obj of skuObjs) {
     if (userInput.includes(obj)) {
       skuFound = true;
+      console.log("sending --- " + obj);
       res.json({ sku: obj });
       break; // Exit the loop once an SKU is found
     }

@@ -1,0 +1,18 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      # ////////////Var Declaration//////////
+      - echo "AppServers";
+      - echo "Updating lambda Function...";
+      - echo RA_BotKit;
+      - npm install;
+      - echo "installed...";
+      - zip -r botkit.zip *;
+      - ls;
+      - aws lambda update-function-code --function-name RA_BotKit --zip-file fileb://botkit.zip;
+      - cd ..;
+      - echo "DONE!!"
+  post_build:
+    commands:
+      - echo "post_build..."

@@ -11,6 +11,6 @@ var server = new Server(config, app);
 server.start();
 
 sdk.registerBot(require("../RA_EX_Zebra_v2.1.js"));
-app.load();
-app.use(`/.netlify/functions/api`, server);
-module.exports.handler = serverless(app);
+// app.load();
+// app.use(`/.netlify/functions/api`, server);
+// module.exports.handler = serverless(app);

@@ -96,19 +96,28 @@ app.get("/", (req, res) => {
   res.json({ success: true });
 });
 app.post("/extractSKU", (req, res) => {
-  const { userInput } = req.body;
-  console.log(userInput);
-  let skuFound = false;
-  for (const obj of skuObjs) {
-    if (userInput.includes(obj)) {
-      skuFound = true;
-      console.log("sending --- " + obj);
-      res.json({ sku: obj });
-      break; // Exit the loop once an SKU is found
+  try {
+    const { userInput } = req.body;
+    console.log(userInput);
+
+    let skuFound = false;
+
+    for (const obj of skuObjs) {
+      if (userInput.includes(obj)) {
+        skuFound = true;
+        console.log("sending --- " + obj);
+        return res.status(200).json({ sku: obj });
+      }
     }
-  }
-  if (!skuFound) {
-    res.json({});
+
+    // If SKU is not found
+    if (!skuFound) {
+      return res.status(404).json({ error: "SKU not found" });
+    }
+  } catch (error) {
+    return res.status(400).json({
+      error: "request body not found",
+    });
   }
 });
 
